@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 
 public class ClickExplode : MonoBehaviour {
+    public delegate void DieEvent(GameObject gameObject);
+    public event DieEvent OnDieEvent;
+
+	public Transform waveParent;
+
 	public  Transform PosicionDeLaBola;
 	public Rigidbody2D RigBody;
 	public float MultiplicadorDeFuerza;
@@ -15,12 +20,15 @@ public class ClickExplode : MonoBehaviour {
 	public bool EnPausa;
 	public Canvas CanvasDelMenu;
 
+	private bool isAlive;
+
 	// Use this for initialization
 	void Start () {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
 		EnPausa = false;
 		Time.timeScale = 1;
+		isAlive = true;
 	}
 
 	// Update is called once per frame
@@ -56,11 +64,11 @@ public class ClickExplode : MonoBehaviour {
 	}
 
 	public void iniciarOnda(Vector2 PosicionDeGeneracion){
-		GameObject OndaGenerada = Instantiate (OndaInicial);
+		GameObject OndaGenerada = Instantiate (OndaInicial, waveParent);
 		OndaGenerada.transform.position = PosicionDeGeneracion;
 		Onda ScriptHonda = OndaGenerada.GetComponent<Onda> ();
 		ScriptHonda.setRadioDeOnda (2.5f);
-	    ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
+	    	ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
 		ScriptHonda.setAtraer (false);
 		ScriptHonda.DestruirOnda ();
 	}
@@ -83,17 +91,20 @@ public class ClickExplode : MonoBehaviour {
 		string TagDelCollider = ObjetoQueColiciono.gameObject.tag;
 		if(TagDelCollider=="ObstaculoAsesino"){
 			print ("GameOver");
-			NivelPerdido ();
+			if(isAlive) StartCoroutine(NivelPerdido());
 		}
 	}
 
 	void OnBecameInvisible(){
-		NivelPerdido ();
+		if(isAlive) StartCoroutine(NivelPerdido());
 	}
 
-	public void NivelPerdido(){
-		string IndiceEscenaHaCargar = "PruebaEffectos";
-		SceneManager.LoadScene (IndiceEscenaHaCargar);
+	public IEnumerator NivelPerdido(){
+		isAlive = false;
+		if(OnDieEvent != null) OnDieEvent(gameObject);
+		yield return new WaitForSeconds(2);
+		Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
 	}
 
 	public void ActivarMenu(){
