@@ -14,12 +14,16 @@ public class ClickExplode : MonoBehaviour {
 	public GameObject OndaInicial;
 	public bool EnPausa;
 	public Canvas CanvasDelMenu;
+	public bool isAlive;
+	public delegate void DieEvent(GameObject gameObject);
+	public event DieEvent OnDieEvent;
 
 	// Use this for initialization
 	void Start () {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
 		EnPausa = false;
+		isAlive = true;
 		Time.timeScale = 1;
 	}
 
@@ -88,12 +92,16 @@ public class ClickExplode : MonoBehaviour {
 	}
 
 	void OnBecameInvisible(){
-		NivelPerdido ();
+		print ("DesaparecioDelMapa");
+		if(isAlive) StartCoroutine(NivelPerdido());
 	}
 
-	public void NivelPerdido(){
-		string IndiceEscenaHaCargar = "PruebaEffectos";
-		SceneManager.LoadScene (IndiceEscenaHaCargar);
+	public IEnumerator NivelPerdido(){
+		isAlive = false;
+		if(OnDieEvent != null) OnDieEvent(gameObject);
+		yield return new WaitForSeconds(2);
+		Scene scene = SceneManager.GetActiveScene(); 
+		SceneManager.LoadScene(scene.name);
 	}
 
 	public void ActivarMenu(){
