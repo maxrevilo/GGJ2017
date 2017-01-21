@@ -222,10 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TiempoAntesDeDestruir: 0
   RadioDeOnda: 0
-  FuerzaDeOnda: 0
+  FuerzaDeOnda: 10
   RadioInicial: 0
   MaximoRadio: 2.5
   ColisionadorDelObjeto: {fileID: 58526836459827006}
+  tiempoDeVida: 1.2
 --- !u!198 &198502332086296548
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -233,7 +234,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687996381052082}
   serializedVersion: 5
-  lengthInSec: 3
+  lengthInSec: 1
   speed: 1
   looping: 0
   prewarm: 0
@@ -325,7 +326,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 6
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -454,10 +455,10 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3764706, g: 0.16470589, b: 0.37254903, a: 1}
+      maxColor: {r: 0.08235294, g: 0.03529412, b: 0.08235294, a: 1}
       minMaxState: 0
     startSize:
-      scalar: 0.6
+      scalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -859,15 +860,15 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 0.5158842
-          inSlope: 0.48411578
-          outSlope: 0.48411578
+          value: 0.28921753
+          inSlope: 0.71078247
+          outSlope: 0.71078247
           tangentMode: 34
         - serializedVersion: 2
           time: 1
           value: 1
-          inSlope: 0.48411578
-          outSlope: 0.48411578
+          inSlope: 0.71078247
+          outSlope: 0.71078247
           tangentMode: 34
         m_PreInfinity: 2
         m_PostInfinity: 2

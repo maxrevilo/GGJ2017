@@ -10,10 +10,12 @@ public class Onda : MonoBehaviour {
 	public float MaximoRadio = 2.5f;
 	public CircleCollider2D ColisionadorDelObjeto;
 
+	public float tiempoDeVida = 1.2f;
 
 	// Use this for initialization
 	void Start () {
 		RadioInicial = 0;
+		Invoke ("destruirOnda", tiempoDeVida);
 	}
 	
 	// Update is called once per frame
@@ -52,6 +54,6 @@ public class Onda : MonoBehaviour {
 	}
 
 	public void DestruirOnda(){
-		Invoke ("destruirOnda",5f);
+		Destroy(gameObject);
 	}
 }
