@@ -52,6 +52,6 @@ public class Onda : MonoBehaviour {
 	}
 
 	public void DestruirOnda(){
-		Invoke ("destruirOnda",5f);
+		Invoke ("destruirOnda",2f);
 	}
 }

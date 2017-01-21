@@ -42,6 +42,7 @@ public class ClickExplode : MonoBehaviour {
 		Onda ScriptHonda = OndaGenerada.GetComponent<Onda> ();
 		ScriptHonda.setRadioDeOnda (2.5f);
 	    ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
+		ScriptHonda.DestruirOnda ();
 	}
 
 	public void activarTiempoDeCargaDeOnda(){
