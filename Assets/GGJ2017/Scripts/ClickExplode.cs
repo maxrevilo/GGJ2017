@@ -13,10 +13,13 @@ public class ClickExplode : MonoBehaviour {
 	public float MaximoTiempoDeSeleccion;
 	public GameObject OndaInicial;
 
+	private bool isAlive;
+
 	// Use this for initialization
 	void Start () {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
+		isAlive = true;
 	}
 
 	// Update is called once per frame
@@ -62,16 +65,18 @@ public class ClickExplode : MonoBehaviour {
 		string TagDelCollider = ObjetoQueColiciono.gameObject.tag;
 		if(TagDelCollider=="ObstaculoAsesino"){
 			print ("GameOver");
-			NivelPerdido ();
+			if(isAlive) StartCoroutine(NivelPerdido());
 		}
 	}
 
 	void OnBecameInvisible(){
-		NivelPerdido ();
+		if(isAlive) StartCoroutine(NivelPerdido());
 	}
 
-	public void NivelPerdido(){
-		string IndiceEscenaHaCargar = "PruebaEffectos";
-		SceneManager.LoadScene (IndiceEscenaHaCargar);
+	public IEnumerator NivelPerdido(){
+		isAlive = false;
+		yield return new WaitForSeconds(2);
+		Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
 	}
 }
