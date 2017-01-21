@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114465675553525782}
   - component: {fileID: 50325203676848156}
   - component: {fileID: 58526836459827006}
+  - component: {fileID: 114382943525581652}
   m_Layer: 0
   m_Name: OndaPrueba
   m_TagString: Untagged
@@ -209,6 +210,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114382943525581652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1882530295856762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bca15d9b1d664101aa07b2237651885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distortionMaterial: {fileID: 2100000, guid: d4a5e023618c04b29b476c0d182b6509, type: 2}
+  particleSystem: {fileID: 198502332086296548}
+  maxDistortionStrenght: 40
+  minDistortionStrenght: 5
+  minParticleSize: 0.3
+  maxParticleSize: 0.5
+  minParticleSpeed: 2
+  maxParticleSpeed: 6
+  minParticleColor: {r: 0.043137256, g: 0.019607844, b: 0.043137256, a: 1}
+  maxParticleColor: {r: 0.14117648, g: 0.11764706, b: 0.0627451, a: 1}
 --- !u!114 &114465675553525782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,10 +242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d957925b47f2a45a024469471d71bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TiempoAntesDeDestruir: 0
-  RadioDeOnda: 0
+  TiempoAntesDeDestruir: 5
+  RadioDeOnda: 5
+  Atraer: 0
   FuerzaDeOnda: 10
-  RadioInicial: 0
+  RadioInicial: 5
   MaximoRadio: 2.5
   ColisionadorDelObjeto: {fileID: 58526836459827006}
   tiempoDeVida: 1.2
