@@ -96,6 +96,8 @@ MonoBehaviour:
   MaximoTiempoDeSeleccion: 2
   OndaInicial: {fileID: 1882530295856762, guid: d13c8b3bb10569d41abe2a996fad8bb3,
     type: 2}
+  EnPausa: 0
+  CanvasDelMenu: {fileID: 0}
 --- !u!212 &212812017566450258
 SpriteRenderer:
   m_ObjectHideFlags: 1
