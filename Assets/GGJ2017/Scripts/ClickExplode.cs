@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 
 public class ClickExplode : MonoBehaviour {
+    public delegate void DieEvent(GameObject gameObject);
+    public event DieEvent OnDieEvent;
+
+	public Transform waveParent;
+
 	public  Transform PosicionDeLaBola;
 	public Rigidbody2D RigBody;
 	public float MultiplicadorDeFuerza;
@@ -30,11 +35,6 @@ public class ClickExplode : MonoBehaviour {
 		if (Input.GetButtonUp("Fire1")) {
 			desplegarOnda ();
 		}
-		if (Input.GetButtonDown("Fire1")) {
-			Vector2 VectorDeBolaHaPuntero =PosicionDeLaBola.position-Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			print (VectorDeBolaHaPuntero);
-			RigBody.AddForce ((MultiplicadorDeFuerza/VectorDeBolaHaPuntero.magnitude)*VectorDeBolaHaPuntero);
-		}
 	}
 
 	public void desplegarOnda(){
@@ -45,12 +45,12 @@ public class ClickExplode : MonoBehaviour {
 	}
 
 	public void iniciarOnda(Vector2 PosicionDeGeneracion){
-		GameObject OndaGenerada = Instantiate (OndaInicial);
+		GameObject OndaGenerada = Instantiate (OndaInicial, waveParent);
 		OndaGenerada.transform.position = PosicionDeGeneracion;
 		Onda ScriptHonda = OndaGenerada.GetComponent<Onda> ();
 		ScriptHonda.setRadioDeOnda (2.5f);
 	    ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
-		ScriptHonda.DestruirOnda ();
+		//ScriptHonda.DestruirOnda ();
 	}
 
 	public void activarTiempoDeCargaDeOnda(){
@@ -81,6 +81,7 @@ public class ClickExplode : MonoBehaviour {
 
 	public IEnumerator NivelPerdido(){
 		isAlive = false;
+		if(OnDieEvent != null) OnDieEvent(gameObject);
 		yield return new WaitForSeconds(2);
 		Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
