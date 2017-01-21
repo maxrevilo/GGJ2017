@@ -20,7 +20,6 @@ public class ClickExplode : MonoBehaviour {
 		if (Input.GetButtonDown("Fire1")) {
 			Vector2 VectorDeBolaHaPuntero =PosicionDeLaBola.position-Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			print (VectorDeBolaHaPuntero);
-
 			RigBody.AddForce ((MultiplicadorDeFuerza/VectorDeBolaHaPuntero.magnitude)*VectorDeBolaHaPuntero);
 			}
 	}
