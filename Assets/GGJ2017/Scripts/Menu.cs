@@ -13,12 +13,13 @@ public class Menu : MonoBehaviour {
 	void Update () {
 		
 	}
-
-	public void CerrarJuego(){
-		Application.Quit();
+		
+	public void RegresarAlMenu(){
+		
+		
 	}
 
-	public void RegresarAlMenu(){
+	public void ResetDelNivel(){
 		
 	}
 }

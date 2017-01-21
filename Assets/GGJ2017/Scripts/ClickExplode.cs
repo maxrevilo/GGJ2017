@@ -20,6 +20,7 @@ public class ClickExplode : MonoBehaviour {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
 		EnPausa = false;
+		Time.timeScale = 1;
 	}
 
 	// Update is called once per frame
