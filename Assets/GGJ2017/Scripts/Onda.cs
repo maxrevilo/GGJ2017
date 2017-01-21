@@ -5,6 +5,7 @@ using UnityEngine;
 public class Onda : MonoBehaviour {
 	public float TiempoAntesDeDestruir;
 	public float RadioDeOnda;
+	public bool Atraer;
 	public float FuerzaDeOnda;
 	public float RadioInicial;
 	public float MaximoRadio = 2.5f;
@@ -21,7 +22,6 @@ public class Onda : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		AmpliarRadio ();
-		
 	}
 
 	public void destruirOnda(){
@@ -47,7 +47,7 @@ public class Onda : MonoBehaviour {
 			print ("Te golpeo una onda");
 			Vector2 PosicionDeLaOnda =  gameObject.transform.position;
 			Vector2 PosicionDelObjeto = ColiderObjetivo.transform.position;
-			Vector2 VectorOndaHaObjeto = PosicionDelObjeto - PosicionDeLaOnda;
+			Vector2 VectorOndaHaObjeto = Atraer ?  PosicionDeLaOnda - PosicionDelObjeto:PosicionDelObjeto - PosicionDeLaOnda  ;
 			Rigidbody2D RigidBodyObjetivo = ColiderObjetivo.gameObject.GetComponent<Rigidbody2D> ();
 			RigidBodyObjetivo.AddForce ((FuerzaDeOnda/VectorOndaHaObjeto.magnitude)*VectorOndaHaObjeto);
 		}
@@ -55,5 +55,9 @@ public class Onda : MonoBehaviour {
 
 	public void DestruirOnda(){
 		Destroy(gameObject);
+	}
+
+	public void setAtraer(bool Atraer){
+		this.Atraer = Atraer;
 	}
 }

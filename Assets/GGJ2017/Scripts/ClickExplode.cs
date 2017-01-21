@@ -12,6 +12,8 @@ public class ClickExplode : MonoBehaviour {
 	public float TiempoSeleccionado;
 	public float MaximoTiempoDeSeleccion;
 	public GameObject OndaInicial;
+	public bool EnPausa;
+	public Canvas CanvasDelMenu;
 
 	private bool isAlive;
 
@@ -20,15 +22,32 @@ public class ClickExplode : MonoBehaviour {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
 		isAlive = true;
+		EnPausa = false;
+		Time.timeScale = 1;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButton("Fire1")){
-			activarTiempoDeCargaDeOnda ();
+			if(!EnPausa){
+				activarTiempoDeCargaDeOnda ();	
+			}
 		}
 		if (Input.GetButtonUp("Fire1")) {
-			desplegarOnda ();
+			if(!EnPausa){
+				desplegarOnda ();
+			}
+		}
+
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			if(EnPausa){
+				Time.timeScale = 1;
+				DesactivarMenu ();
+			}else{
+				ActivarMenu ();
+				Time.timeScale = 0;
+			}
+			EnPausa = !EnPausa;
 		}
 		if (Input.GetButtonDown("Fire1")) {
 			Vector2 VectorDeBolaHaPuntero =PosicionDeLaBola.position-Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -50,6 +69,7 @@ public class ClickExplode : MonoBehaviour {
 		Onda ScriptHonda = OndaGenerada.GetComponent<Onda> ();
 		ScriptHonda.setRadioDeOnda (2.5f);
 	    ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
+		ScriptHonda.setAtraer (false);
 		ScriptHonda.DestruirOnda ();
 	}
 
@@ -84,5 +104,13 @@ public class ClickExplode : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
+	}
+
+	public void ActivarMenu(){
+		CanvasDelMenu.gameObject.SetActive(true);
+	}
+
+	public void DesactivarMenu(){
+		CanvasDelMenu.gameObject.SetActive(false);
 	}
 }
