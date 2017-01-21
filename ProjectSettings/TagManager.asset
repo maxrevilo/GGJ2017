@@ -14,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Obstaculo
+  - Player
+  - Onda
   - 
   - 
   - 
@@ -39,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 668633275
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstaculo
+    uniqueID: 2381077353
+    locked: 0
+  - name: Player
+    uniqueID: 1555263181
+    locked: 0
+  - name: Onda
+    uniqueID: 4059204377
     locked: 0
