@@ -294,3 +294,8 @@ MonoBehaviour:
   RigBody: {fileID: 0}
   MultiplicadorDeFuerza: 60
   MagnitudDeExplosion: 0
+  TiempoSeleccionado: 0
+  MaximoTiempoDeSeleccion: 2
+  MaximaFuerza: 0
+  MinimaFuerza: 10
+  MinimoTiempoDeSeleccion: 0.2
