@@ -397,6 +397,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigid: {fileID: 0}
   ColliderDeSobrePaso: {fileID: 0}
+  RigidConejo: {fileID: 0}
+  wait: 3
+  countDownWidget: {fileID: 0}
+  winPanel: {fileID: 0}
+  velocidad: 1
+  nextScene: Creditos
 --- !u!61 &962600816
 BoxCollider2D:
   m_ObjectHideFlags: 0
