@@ -18,6 +18,13 @@ public class Bunny : MonoBehaviour {
 	void Update () {
 		
 	}
+	void OnCollisionEnter2D(Collision2D ObjetoQueColiciono){
+		animator.SetTrigger("rebote");
+	}
+
+	void Epilepsia() {
+		animator.SetTrigger("epilepsia");
+	}
 
 	void DieEvent(GameObject gameObject) {
 		animator.SetBool("isAlive", false);
