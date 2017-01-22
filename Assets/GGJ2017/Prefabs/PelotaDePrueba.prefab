@@ -185,7 +185,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1556819155682574}
-  m_LocalRotation: {x: 0.012479614, y: 0.011284277, z: 0.092131376, w: 0.99560475}
+  m_LocalRotation: {x: 0.014021461, y: 0.009299153, z: 0.19830002, w: 0.979997}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0887236, y: 0.09674448, z: 1}
   m_Children:
@@ -203,7 +203,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403365483691520}
-  m_LocalRotation: {x: 0, y: 0, z: -0.07495518, w: 0.9971869}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0039819353, w: 0.99999213}
   m_LocalPosition: {x: 2.6979737, y: -3.9668078, z: 0}
   m_LocalScale: {x: 0.9622369, y: 0.9828131, z: 1}
   m_Children: []
@@ -216,7 +216,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732190896651112}
-  m_LocalRotation: {x: 0, y: 0, z: -0.08426422, w: 0.99644345}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13394758, w: 0.99098843}
   m_LocalPosition: {x: 4.83, y: 5.45, z: 0}
   m_LocalScale: {x: 1.0314379, y: 0.86665845, z: 1}
   m_Children:
@@ -243,7 +243,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1314034423317666}
-  m_LocalRotation: {x: 0.006106684, y: -0.007267925, z: -0.33517405, w: 0.94210845}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0030949211, w: 0.99999523}
   m_LocalPosition: {x: -4.5, y: -3.38, z: -0}
   m_LocalScale: {x: 1.0964469, y: 1.0452857, z: 1}
   m_Children: []
@@ -269,7 +269,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1733015149108548}
-  m_LocalRotation: {x: -0.0016765303, y: 0.0021731525, z: 0.06733309, w: 0.9977268}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0017661739, w: 0.99999845}
   m_LocalPosition: {x: 3.78, y: 4.47, z: 0}
   m_LocalScale: {x: 0.93113583, y: 1.0018357, z: 1}
   m_Children: []
@@ -282,8 +282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985935041220946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 83.74, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.41040942, w: 0.9119014}
+  m_LocalPosition: {x: 0.7676946, y: 0.2816824, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849548096618396}
@@ -296,7 +296,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394768210456666}
-  m_LocalRotation: {x: -0.003226828, y: 0.003200032, z: -0.011291495, w: 0.999926}
+  m_LocalRotation: {x: 0, y: 0, z: -0.11264263, w: 0.9936356}
   m_LocalPosition: {x: 3.26, y: 1.2, z: -0.016}
   m_LocalScale: {x: 0.9511356, y: 1.0259657, z: 1}
   m_Children: []
@@ -352,16 +352,18 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.18006158, y: 0.04995465}
-      - {x: 0.11212106, y: -0.030250235}
-      - {x: 0.11293445, y: -0.069249734}
+    - - {x: 0.76648474, y: 0.08936386}
+      - {x: 0.40619126, y: -0.5534549}
+      - {x: -0.052622348, y: -0.3924388}
       - {x: -0.05295353, y: -0.09424163}
-      - {x: -0.13979712, y: -0.037131842}
-      - {x: -0.10072322, y: 0.15823816}
-      - {x: 0.044718888, y: 0.13435957}
-      - {x: 0.00781579, y: 0.20165367}
-      - {x: 0.055572797, y: 0.24723999}
-      - {x: 0.107671455, y: 0.17343357}
+      - {x: -0.08740777, y: -0.4708425}
+      - {x: -0.5524518, y: -0.43966252}
+      - {x: -0.41424662, y: 0.46911368}
+      - {x: 0.17913327, y: 0.55818886}
+      - {x: 0.0013176203, y: 0.9173693}
+      - {x: 0.16579196, y: 1.0791949}
+      - {x: 0.6440395, y: 0.477556}
+      - {x: 0.7334119, y: 0.36770612}
 --- !u!95 &95125882341979526
 Animator:
   serializedVersion: 3
@@ -417,7 +419,7 @@ MonoBehaviour:
   PosicionDeLaBola: {fileID: 4714706358091022}
   RigBody: {fileID: 50243799207023912}
   MultiplicadorDeFuerza: 400
-  MagnitudDeExplosion: 0
+  MagnitudDeExplosion: 6.628058
   TiempoSeleccionado: 0
   MaximoTiempoDeSeleccion: 2
   OndaInicial: {fileID: 1882530295856762, guid: d13c8b3bb10569d41abe2a996fad8bb3,

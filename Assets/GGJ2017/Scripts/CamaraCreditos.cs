@@ -11,7 +11,7 @@ public class CamaraCreditos : MonoBehaviour {
 	void Start () {
 		RigidCamara = gameObject.GetComponent<Rigidbody2D> ();
 		Collider = gameObject.GetComponent<BoxCollider2D> ();
-		RigidCamara.velocity = new Vector2 (2f, 0);
+		RigidCamara.velocity = new Vector2 (0, -2f);
 	}
 	
 	// Update is called once per frame
