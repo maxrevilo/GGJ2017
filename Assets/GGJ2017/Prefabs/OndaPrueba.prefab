@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bca15d9b1d664101aa07b2237651885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distortionMaterial: {fileID: 2100000, guid: d4a5e023618c04b29b476c0d182b6509, type: 2}
+  distortionWave: {fileID: 1924857408298986}
   particleSystem: {fileID: 198502332086296548}
   maxDistortionStrenght: 40
   minDistortionStrenght: 5
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TiempoAntesDeDestruir: 0
   RadioDeOnda: 10
+  Atraer: 0
   FuerzaDeOnda: 10
   RadioInicial: 10
   MaximoRadio: 10
