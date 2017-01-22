@@ -16,7 +16,8 @@ public class Menu : MonoBehaviour {
 	}
 		
 	public void RegresarAlMenu(){
-		
+
+		SceneManager.LoadScene("MainMenu");
 		
 	}
 

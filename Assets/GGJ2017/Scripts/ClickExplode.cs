@@ -82,7 +82,6 @@ public class ClickExplode : MonoBehaviour {
 	public void calcularMagnitudDeExplosion(){
 		if (TiempoSeleccionado <= MaximoTiempoDeSeleccion) {
 			float FraccionDeFuezaAlcanzada = (TiempoSeleccionado / MaximoTiempoDeSeleccion);
-			print (FraccionDeFuezaAlcanzada);
 			MagnitudDeExplosion = MultiplicadorDeFuerza * FraccionDeFuezaAlcanzada;
 		} else {
 			MagnitudDeExplosion = MultiplicadorDeFuerza;
@@ -92,13 +91,11 @@ public class ClickExplode : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D ObjetoQueColiciono){
 		string TagDelCollider = ObjetoQueColiciono.gameObject.tag;
 		if(TagDelCollider=="ObstaculoAsesino"){
-			print ("GameOver");
 			if(isAlive) StartCoroutine(NivelPerdido());
 		}
 	}
 
 	void OnBecameInvisible(){
-		print ("GameOver");
 		if(isAlive) StartCoroutine(NivelPerdido());
 	}
 

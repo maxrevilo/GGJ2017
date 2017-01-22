@@ -43,7 +43,6 @@ public class Onda : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D ColiderObjetivo){
 		if(ColiderObjetivo.CompareTag("Player")){
-			print ("Te golpeo una onda");
 			Vector2 PosicionDeLaOnda =  gameObject.transform.position;
 			Vector2 PosicionDelObjeto = ColiderObjetivo.transform.position;
 			Vector2 VectorOndaHaObjeto = Atraer ?  PosicionDeLaOnda - PosicionDelObjeto:PosicionDelObjeto - PosicionDeLaOnda  ;

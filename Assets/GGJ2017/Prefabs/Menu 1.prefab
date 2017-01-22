@@ -361,7 +361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114169196424815182}
         m_MethodName: RegresarAlMenu
         m_Mode: 1
         m_Arguments:
