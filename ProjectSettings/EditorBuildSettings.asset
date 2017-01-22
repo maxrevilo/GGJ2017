@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GGJ2017/Scenes/PruebaEffectos.unity
-  - enabled: 1
     path: Assets/GGJ2017/Scenes/Nivel0.unity
   - enabled: 1
     path: Assets/GGJ2017/Scenes/Nivel1.unity
+  - enabled: 1
+    path: Assets/GGJ2017/Scenes/MainMenu.unity

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50664190545942838}
   - component: {fileID: 114109875077063038}
   - component: {fileID: 60058653904349182}
+  - component: {fileID: 114576086442696696}
   m_Layer: 0
   m_Name: Cierra
   m_TagString: ObstaculoAsesino
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1089364615157288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 169.07953, y: 2.88, z: 0}
-  m_LocalScale: {x: 0.57759076, y: 0.5775908, z: 0.5775908}
+  m_LocalPosition: {x: -171.4, y: 6.1, z: 0}
+  m_LocalScale: {x: 0.57759, y: 0.57759, z: 0.57759}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -168,6 +169,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radSpeed: -50
+--- !u!114 &114576086442696696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089364615157288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778964430445644c09f118ecb49d8a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212020809250774934
 SpriteRenderer:
   m_ObjectHideFlags: 1
