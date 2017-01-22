@@ -16,7 +16,6 @@ public class Onda : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RadioInicial = 0;
-		Invoke ("destruirOnda", tiempoDeVida);
 	}
 	
 	// Update is called once per frame
@@ -54,7 +53,7 @@ public class Onda : MonoBehaviour {
 	}
 
 	public void DestruirOnda(){
-		Destroy(gameObject);
+		Invoke("destruirOnda",tiempoDeVida);
 	}
 
 	public void setAtraer(bool Atraer){

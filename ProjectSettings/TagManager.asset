@@ -45,12 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Onda
+    uniqueID: 4059204377
+    locked: 0
   - name: Obstaculo
     uniqueID: 2381077353
     locked: 0
   - name: Player
     uniqueID: 1555263181
-    locked: 0
-  - name: Onda
-    uniqueID: 4059204377
     locked: 0

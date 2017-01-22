@@ -73,7 +73,7 @@ Transform:
   m_GameObject: {fileID: 1154828312835088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0047529, y: 1.0047522, z: 1.0047522}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 4583738958732164}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820175498133422}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.23, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -177,7 +177,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 2.5500002
 --- !u!64 &64409104397725720
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -223,10 +223,11 @@ MonoBehaviour:
   TiempoAntesDeDestruir: 0
   RadioDeOnda: 0
   Atraer: 1
-  FuerzaDeOnda: 500
+  FuerzaDeOnda: 200
   RadioInicial: 0
   MaximoRadio: 2.5
   ColisionadorDelObjeto: {fileID: 58623142785102342}
+  tiempoDeVida: 1.2
 --- !u!198 &198976230481361832
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -282,7 +283,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1191178102
+  randomSeed: 1525717499
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -455,7 +456,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3019608, g: 0.02745098, b: 0.05490196, a: 0.9529412}
+      maxColor: {r: 0.02745098, g: 0.22352941, b: 0.3019608, a: 0.9529412}
       minMaxState: 0
     startSize:
       scalar: 0.6

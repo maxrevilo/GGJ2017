@@ -26,9 +26,9 @@ public class ClickExplode : MonoBehaviour {
 	void Start () {
 		PosicionDeLaBola = GetComponent<Transform>();
 		RigBody = GetComponent<Rigidbody2D> ();
-		isAlive = true;
 		EnPausa = false;
 		Time.timeScale = 1;
+		isAlive = true;
 	}
 
 	// Update is called once per frame
@@ -70,6 +70,7 @@ public class ClickExplode : MonoBehaviour {
 		ScriptHonda.setRadioDeOnda (2.5f);
 	    ScriptHonda.SetFuerzaDeOnda (MagnitudDeExplosion);
 		ScriptHonda.setAtraer(false);
+		ScriptHonda.DestruirOnda ();
 		WaveGraphics waveGraphics = OndaGenerada.GetComponent<WaveGraphics> ();
 		waveGraphics.PlayWithStrenght(MagnitudDeExplosion / MultiplicadorDeFuerza);
 	}
@@ -97,6 +98,7 @@ public class ClickExplode : MonoBehaviour {
 	}
 
 	void OnBecameInvisible(){
+		print ("GameOver");
 		if(isAlive) StartCoroutine(NivelPerdido());
 	}
 
@@ -114,5 +116,11 @@ public class ClickExplode : MonoBehaviour {
 
 	public void DesactivarMenu(){
 		CanvasDelMenu.gameObject.SetActive(false);
-	}
+	}		
 }
+
+
+
+
+
+

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828386924146450}
   - component: {fileID: 212466299081556412}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447174141815990}
   - component: {fileID: 212573052501673882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PataT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828999540128934}
   - component: {fileID: 212131917447761962}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: OrejaD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4641168328713584}
   - component: {fileID: 212113706179107902}
   - component: {fileID: 95458422683802738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Conejo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928149880175012}
   - component: {fileID: 212473646896783402}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: OrejaT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4869073637736548}
   - component: {fileID: 212592144262608898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Blood_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4125631395011792}
   - component: {fileID: 198994328028069954}
   - component: {fileID: 199820073262669320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4815436363028984}
   - component: {fileID: 212580872906698224}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PataD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4795187761683288}
   - component: {fileID: 212946577627677884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Esqueleto Conejo_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,9 @@ GameObject:
   - component: {fileID: 50243799207023912}
   - component: {fileID: 58711238299869828}
   - component: {fileID: 114660095036258178}
-  m_Layer: 0
+  - component: {fileID: 114095715824019588}
+  - component: {fileID: 114581403224573168}
+  m_Layer: 10
   m_Name: PelotaDePrueba
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -327,7 +329,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -366,6 +368,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114095715824019588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985935041220946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400a6b13c58164ded8b60f7e70737e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114581403224573168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985935041220946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944058a35eca849e48cdf4336baf60e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radSpeed: 10
 --- !u!114 &114660095036258178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,7 +405,7 @@ MonoBehaviour:
   waveParent: {fileID: 0}
   PosicionDeLaBola: {fileID: 0}
   RigBody: {fileID: 0}
-  MultiplicadorDeFuerza: 200
+  MultiplicadorDeFuerza: 400
   MagnitudDeExplosion: 0
   TiempoSeleccionado: 0
   MaximoTiempoDeSeleccion: 2
@@ -2955,7 +2980,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: d35ca6e9ece3a4245a57dddceeafc0bf, type: 2}
+  - {fileID: 2100000, guid: b017b0e571f1516459cde2a7c672a805, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3020,7 +3045,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1555263181
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3267,7 +3292,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1555263181
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.3803922, g: 0.3803922, b: 0.3803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
