@@ -329,6 +329,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1882530295856762, guid: d13c8b3bb10569d41abe2a996fad8bb3,
         type: 2}
+    - target: {fileID: 114660095036258178, guid: f655e5ab0b4e1fa439a987998165752e,
+        type: 2}
+      propertyPath: MagnitudDeExplosion
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f655e5ab0b4e1fa439a987998165752e, type: 2}
   m_IsPrefabParent: 0
