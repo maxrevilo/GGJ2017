@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/GGJ2017/Scenes/PruebaEffectos.unity
   - enabled: 1
     path: Assets/GGJ2017/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/GGJ2017/Scenes/Nivel1.unity
+  - enabled: 1
+    path: Assets/GGJ2017/Scenes/Nivel2.unity
+  - enabled: 1
+    path: Assets/GGJ2017/Scenes/Creditos.unity
