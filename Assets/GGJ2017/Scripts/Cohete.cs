@@ -13,6 +13,8 @@ public class Cohete : MonoBehaviour {
 
 	public float rotationSpeedDeg = 20;
 
+	public float lifeTime = 4f;
+
 	// Use this for initialization
 	void Start () {
 		if(cohete == null) throw new Exception("cohete not set");
@@ -25,8 +27,8 @@ public class Cohete : MonoBehaviour {
 		if(TagDelCollider.Equals("Player")){
 			objective = ObjetoQueColiciono.gameObject;
 			cohete.SetActive(true);
-			cohete.GetComponent<Rigidbody2D>().velocity = cohete.transform.right * 10f;
-			Invoke("Expire", 4);
+			cohete.GetComponent<Rigidbody2D>().velocity = cohete.transform.right * 5f;
+			Invoke("Expire", lifeTime);
 		}
 	}
 
