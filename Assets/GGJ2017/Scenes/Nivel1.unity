@@ -435,6 +435,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4583738958732164, guid: e8e3ce819b4355e4da809f58cb39bcd8,
     type: 2}
   m_PrefabInternal: {fileID: 715781488}
+--- !u!223 &211283756 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223135979627772034, guid: 34bd9ea2455c44829ba80c5fdd330de0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421594775}
 --- !u!1001 &231311573
 Prefab:
   m_ObjectHideFlags: 0
@@ -2825,6 +2830,37 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114807373910115656, guid: 34bd9ea2455c44829ba80c5fdd330de0,
+        type: 2}
+      propertyPath: nextScene
+      value: Creditos
+      objectReference: {fileID: 0}
+    - target: {fileID: 212125668957223076, guid: 34bd9ea2455c44829ba80c5fdd330de0,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ceced79bb790ff42bd19f5c5ee6b8f5,
+        type: 3}
+    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.8906344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.009524
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5520252
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
   m_IsPrefabParent: 0
@@ -3956,6 +3992,11 @@ Prefab:
       propertyPath: m_Name
       value: JugadorConejo
       objectReference: {fileID: 0}
+    - target: {fileID: 114660095036258178, guid: f655e5ab0b4e1fa439a987998165752e,
+        type: 2}
+      propertyPath: CanvasDelMenu
+      value: 
+      objectReference: {fileID: 211283756}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f655e5ab0b4e1fa439a987998165752e, type: 2}
   m_IsPrefabParent: 0

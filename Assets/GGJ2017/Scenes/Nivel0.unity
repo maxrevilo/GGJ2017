@@ -1135,6 +1135,11 @@ RectTransform:
   m_AnchoredPosition: {x: 316.5, y: 223.5}
   m_SizeDelta: {x: 800, y: 564.9289}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &1379903979 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223135979627772034, guid: 34bd9ea2455c44829ba80c5fdd330de0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421594775}
 --- !u!4 &1400526774 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4057922683643946, guid: c99ba688a09a3224bb7d29b662f60855,
@@ -1178,24 +1183,6 @@ Prefab:
     - target: {fileID: 4507963752375922, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212125668957223076, guid: 34bd9ea2455c44829ba80c5fdd330de0,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1d05063b639d3ce4fa572a3952ef22e5,
-        type: 3}
-    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.2856145
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.2856145
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299043592382762, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.2856145
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34bd9ea2455c44829ba80c5fdd330de0, type: 2}
@@ -1489,6 +1476,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114660095036258178, guid: f655e5ab0b4e1fa439a987998165752e,
+        type: 2}
+      propertyPath: CanvasDelMenu
+      value: 
+      objectReference: {fileID: 1379903979}
     - target: {fileID: 1985935041220946, guid: f655e5ab0b4e1fa439a987998165752e, type: 2}
       propertyPath: m_Name
       value: JugadorConejo
