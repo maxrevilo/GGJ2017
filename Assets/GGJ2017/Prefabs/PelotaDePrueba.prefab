@@ -636,7 +636,7 @@ MonoBehaviour:
   waveParent: {fileID: 0}
   PosicionDeLaBola: {fileID: 4714706358091022}
   RigBody: {fileID: 50243799207023912}
-  MultiplicadorDeFuerza: 400
+  MultiplicadorDeFuerza: 800
   MagnitudDeExplosion: 0
   TiempoSeleccionado: 0
   MaximoTiempoDeSeleccion: 2
